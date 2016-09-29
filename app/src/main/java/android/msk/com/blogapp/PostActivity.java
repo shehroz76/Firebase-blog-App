@@ -3,14 +3,13 @@ package android.msk.com.blogapp;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.net.Uri;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
-import android.widget.ProgressBar;
 
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.database.DatabaseReference;
@@ -24,7 +23,7 @@ public class PostActivity extends AppCompatActivity {
     private EditText mPostTitle;
     private EditText mPostDesc;
     private Button mSubmitButton;
-    private Uri mImageUri;
+    private Uri mImageUri = null;
     private ImageButton mSelectImage;
     private static final int Gallery_Request = 1;
 
@@ -81,7 +80,7 @@ public class PostActivity extends AppCompatActivity {
         final String title_value =  mPostTitle.getText().toString().trim();
         final String desc_value = mPostDesc.getText().toString().trim();
 
-        if(!TextUtils.isEmpty(title_value) && !TextUtils.isEmpty(desc_value) && mImageUri == null){
+        if(!TextUtils.isEmpty(title_value) && !TextUtils.isEmpty(desc_value) && mImageUri != null){
 
             StorageReference filepath = mStoarge.child("Images").child(mImageUri.getLastPathSegment());
             filepath.putFile(mImageUri).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
@@ -109,7 +108,7 @@ public class PostActivity extends AppCompatActivity {
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
 
-        if(requestCode == Gallery_Request && requestCode == RESULT_OK) {
+        if(requestCode == Gallery_Request && resultCode == RESULT_OK) {
             mImageUri = data.getData();
             mSelectImage.setImageURI(mImageUri);
         }

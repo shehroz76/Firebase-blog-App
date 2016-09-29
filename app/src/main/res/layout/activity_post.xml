@@ -10,15 +10,14 @@
     <ImageButton
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:srcCompat="@mipmap/add_btn"
         android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
         android:id="@+id/select_image_Button"
-        android:layout_alignParentStart="true"
         android:background="@color/cardview_light_background"
         android:src="@mipmap/add_btn"
         android:scaleType="centerCrop"
         android:adjustViewBounds="true"
-        android:layout_alignParentEnd="true" />
+        />
 
     <EditText
         android:layout_width="match_parent"
