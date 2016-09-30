@@ -15,8 +15,9 @@
             android:id="@+id/blog_image_view"
             android:src="@mipmap/add_btn"
             android:background="@color/cardview_light_background"
-            android:scaleType="centerCrop"
-            android:adjustViewBounds="true"/>
+            android:scaleType="center"
+            android:layout_margin="10dp"
+            />
 
         <TextView
             android:layout_width="match_parent"

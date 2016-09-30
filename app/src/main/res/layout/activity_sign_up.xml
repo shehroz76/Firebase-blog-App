@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_sign_up"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="android.msk.com.blogapp.SignUpActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true">
+
+        <ImageButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scaleType="center"
+            android:background="@color/cardview_light_background"
+            android:src="@drawable/user_profile_pic"
+            android:id="@+id/user_profile_pic"
+            android:layout_margin="10dp"
+            />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:ems="10"
+            android:id="@+id/User_Name"
+            android:background="@drawable/input_outline"
+            android:hint="Enter UserName"
+            android:layout_margin="10dp"
+            android:padding="15dp"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textEmailAddress"
+            android:ems="10"
+            android:hint="Enter your email"
+            android:layout_margin="10dp"
+            android:padding="15dp"
+            android:background="@drawable/input_outline"
+            android:id="@+id/User_Email"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"
+            android:ems="10"
+            android:id="@+id/User_Password"
+            android:background="@drawable/input_outline"
+            android:layout_margin="10dp"
+            android:padding="15dp"
+            android:hint="Enter your password"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:text="SignUp"
+            android:padding="10dp"
+            android:id="@+id/register_singup_button"
+            android:background="@color/colorPrimary"
+            android:textColor="@color/cardview_light_background"
+
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Already have an account? "
+            android:gravity="center"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:text="SignIn"
+            android:padding="10dp"
+            android:id="@+id/register_singin_button"
+            android:background="@color/colorPrimary"
+            android:textColor="@color/cardview_light_background"
+            />
+
+    </LinearLayout>
+
+    </ScrollView>
+</RelativeLayout>
